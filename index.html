@@ -1,0 +1,1246 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .row-name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+      }
+      .caratteristiche {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .caratteristiche span {
+        color: var(--text2-color);
+        font-family: "Geist Mono Variable", monospace;
+        font-size: 18px;
+      }
+      .I {
+        display: flex;
+        text-align: center;
+        width: 37%;
+        color: var(--text2-color);
+        font-size: 17px;
+        line-height: 1.63em;
+        margin-top: 30px;
+      }
+      .section {
+        display: flex;
+        flex-direction: column;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 60px 0px;
+        border-bottom: 1px solid var(--line);
+      }
+      .section2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding: 60px;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid var(--line);
+      }
+      .section3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding: 60px;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid var(--line);
+      }
+      .section4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding: 60px;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding: 60px;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid var(--line);
+      }
+      .section6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding: 60px;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid var(--line);
+      }
+      @media screen and (max-width: 768px) {
+        .section,
+        .section2,
+        .section3,
+        .section4,
+        .section5,
+        .section6 {
+          width: 100%;
+          height: auto;
+          min-height: auto;
+          padding: 50px 20px;
+        }
+
+        .section {
+          padding-top: 0;
+        }
+
+        .caratteristiche {
+          width: 100%;
+          padding: 0 15px;
+          text-align: center;
+        }
+
+        .caratteristiche span {
+          font-size: 15px;
+          line-height: 1.5;
+        }
+
+        .I {
+          width: 80%;
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .section,
+        .section2,
+        .section3,
+        .section4,
+        .section5,
+        .section6 {
+          height: auto;
+          padding: 40px 10px;
+        }
+
+        .section {
+          padding-top: 0;
+        }
+
+        .caratteristiche {
+          margin-top: 18px;
+          padding: 0;
+        }
+
+        .caratteristiche span {
+          font-size: 13px;
+          line-height: 1.5;
+          text-align: center;
+        }
+
+        .I {
+          width: 100%;
+          font-size: 14px;
+          line-height: 1.6;
+          padding: 0 5px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/fontsource/fonts/geist:vf@latest/latin-wght-normal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/fontsource/fonts/geist-mono:vf@latest/latin-wght-normal.css"
+    />
+  </head>
+  <body>
+    <script>
+      if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+      }
+    </script>
+    <nav>
+      <div class="row-name" id="row-name">
+        <div class="box-name">EN</div>
+        <span class="name">Emanuele Nassisi</span>
+      </div>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#project">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div style="display: flex; flex-direction: row; gap: 30px">
+        <button class="switch" id="light">
+          <img src="sun.png" />
+        </button>
+        <div class="button-contact" id="button-contact1">Contact me</div>
+      </div>
+    </nav>
+    <section class="reveal">
+      <div class="section" id="home">
+        <div class="preTitle">
+          <div class="point"></div>
+          <span
+            style="
+              font-family: &quot;Geist Mono Variable&quot;, monospace;
+              font-weight: 500;
+            "
+          >
+            Available for freelance & opportunities
+          </span>
+        </div>
+        <div class="title">
+          <span style="color: var(--text1-color)">Hi, I'm</span>
+          <span style="color: #1d84f5">&nbsp;Emanuele Nassisi</span>
+          <span style="color: var(--text1-color)">.</span>
+        </div>
+        <div class="caratteristiche">
+          <span
+            >Full Stack Developer | Node.js | Web Development | IT
+            Enthusiast</span
+          >
+        </div>
+        <div style="display: flex; justify-content: center">
+          <span class="I">
+            I'm an 18-year-old developer from Italy, passionate about software
+            engineering, backend development and modern web technologies. I love
+            turning ideas into clean, reliable products.
+          </span>
+        </div>
+        <div class="buttons">
+          <button class="view" id="button1">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: space-between;
+              "
+              href="#project"
+            >
+              View Projects
+              <img src="freccia-destra.png" width="15px" />
+            </div>
+          </button>
+          <button class="contact" id="button2">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: space-between;
+              "
+            >
+              Contact Me
+              <img src="freccia-destra.png" class="image" />
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="reveal">
+      <div class="section2" id="about">
+        <span class="number">/ 01</span>
+        <span class="text">About Me</span>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          "
+        >
+          <span class="describtion">
+            <p>
+              I'm a young Full Stack Developer from Italy with a genuine passion
+              for technology and how things work under the hood. What started as
+              curiosity quickly became a craft I care deeply about.
+            </p>
+            <p>
+              I focus on
+              <span style="color: var(--text1-color)">backend development</span>
+              and modern web technologies, building applications with Node.js
+              and Express while continuously sharpening my skills. I believe
+              great software comes from clean code, thoughtful architecture and
+              a commitment to
+              <span style="color: var(--text1-color)"
+                >continuous learning.</span
+              >
+            </p>
+            <p>
+              When I'm not coding, I'm exploring new tools, reading about system
+              design, or working on side projects that push me a little further
+              every day.
+            </p>
+          </span>
+          <div class="boxes">
+            <div class="box">
+              <span class="data">18</span>
+              <span class="desc">Years old</span>
+            </div>
+            <div class="box">
+              <span class="data">4+</span>
+              <span class="desc">Projects built</span>
+            </div>
+            <div class="box">
+              <span class="data">2+</span>
+              <span class="desc">Years coding</span>
+            </div>
+            <div class="box">
+              <span class="data"><img src="infinite.png" width="30px" /></span>
+              <span class="desc">Curiosity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reveal">
+      <div class="section3" id="skills">
+        <span class="number">/ 02</span>
+        <span class="text">Skills & Technologies</span>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <span class="describtion" style="width: 100%; margin-top: 20px">
+            The stack I use to design, build and ship modern web applications.
+          </span>
+          <div class="boxes2">
+            <div class="boxTech1">
+              <span class="titleBox">
+                <div class="icon">
+                  <div class="img code"></div>
+                </div>
+                <span
+                  style="
+                    font-size: 18px;
+                    color: var(--text1-color);
+                    font-weight: 600;
+                  "
+                  >Frontend</span
+                >
+              </span>
+              <span class="descBox">
+                <div class="cont">
+                  <span>HTML5</span>
+                </div>
+                <div class="cont">
+                  <span>CSS3</span>
+                </div>
+                <div class="cont">
+                  <span>JavaScript</span>
+                </div>
+              </span>
+            </div>
+            <div class="boxTech2">
+              <span class="titleBox">
+                <div class="icon">
+                  <div class="img back"></div>
+                </div>
+                <span
+                  style="
+                    font-size: 18px;
+                    color: var(--text1-color);
+                    font-weight: 600;
+                  "
+                  >Backend</span
+                >
+              </span>
+              <span class="descBox">
+                <div class="cont">
+                  <span>Node.js</span>
+                </div>
+                <div class="cont">
+                  <span>Express.js</span>
+                </div>
+              </span>
+            </div>
+            <div class="boxTech3">
+              <span class="titleBox">
+                <div class="icon">
+                  <div class="img data"></div>
+                </div>
+                <span
+                  style="
+                    font-size: 18px;
+                    color: var(--text1-color);
+                    font-weight: 600;
+                  "
+                  >Database</span
+                >
+              </span>
+              <span class="descBox">
+                <div class="cont">
+                  <span>MySQL</span>
+                </div>
+                <div class="cont">
+                  <span>PostgreSQL (learning)</span>
+                </div>
+              </span>
+            </div>
+            <div class="boxTech4">
+              <span class="titleBox">
+                <div class="icon">
+                  <div class="img tool"></div>
+                </div>
+                <span
+                  style="
+                    font-size: 18px;
+                    color: var(--text1-color);
+                    font-weight: 600;
+                  "
+                  >Tools</span
+                >
+              </span>
+              <span class="descBox">
+                <div class="cont">
+                  <span>Git</span>
+                </div>
+                <div class="cont">
+                  <span>GitHub</span>
+                </div>
+                <div class="cont">
+                  <span>Render</span>
+                </div>
+                <div class="cont">
+                  <span>VSCode</span>
+                </div>
+              </span>
+            </div>
+            <div class="boxTech5">
+              <span class="titleBox">
+                <div class="icon">
+                  <div class="img currently"></div>
+                </div>
+                <span
+                  style="
+                    font-size: 18px;
+                    color: var(--text1-color);
+                    font-weight: 600;
+                  "
+                  >Currently Learning</span
+                >
+              </span>
+              <span class="descBox">
+                <div class="cont">
+                  <span>Docker</span>
+                </div>
+                <div class="cont">
+                  <span>Linux</span>
+                </div>
+                <div class="cont">
+                  <span>Cloud</span>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reveal">
+      <div class="section4" id="project">
+        <span class="number">/ 03</span>
+        <span class="text">Selected Projects</span>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <span class="describtion" style="width: 100%; margin-top: 20px">
+            A few things I've designed and built while learning and
+            experimenting.
+          </span>
+        </div>
+        <div class="container-project">
+          <div class="project1">
+            <div class="image-project1"></div>
+            <div class="descrizione" style="padding: 20px">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 10px;
+                  width: 100%;
+                "
+              >
+                <span class="titleProject">Smart Home ESP32 Project</span>
+                <div class="boxIcon" id="git"></div>
+              </div>
+              <span
+                style="
+                  display: flex;
+                  color: var(--text2-color);
+                  line-height: 1.63em;
+                  font-size: 17px;
+                  margin-top: 15px;
+                "
+                >An IoT smart home system built around the ESP32
+                microcontroller, with sensor integration and remote control over
+                a lightweight web interface and mobile app.</span
+              >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: start;
+                  gap: 20px;
+                  align-items: center;
+                  margin-top: 15px;
+                "
+              >
+                <div class="cont">
+                  <span>ESP32</span>
+                </div>
+                <div class="cont">
+                  <span>Arduino Framework (C++)</span>
+                </div>
+                <div class="cont">
+                  <span>IoT</span>
+                </div>
+                <div class="cont">
+                  <span>HTML5 & CSS3</span>
+                </div>
+                <div class="cont">
+                  <span>Flutter</span>
+                </div>
+              </div>
+              <div class="buttonGit" id="git">
+                <div class="image-git"></div>
+                <span class="git">View on GitHub</span>
+              </div>
+            </div>
+          </div>
+          <div class="project2">
+            <div class="image-project2"></div>
+            <div class="descrizione" style="padding: 20px">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 10px;
+                  width: 100%;
+                "
+              >
+                <span class="titleProject">Fitness Tracker Website</span>
+                <div class="boxIcon" id="git2"></div>
+              </div>
+              <span
+                style="
+                  display: flex;
+                  color: var(--text2-color);
+                  line-height: 1.63em;
+                  font-size: 17px;
+                  margin-top: 15px;
+                "
+                >A full-stack web app to log meals and track daily calories with
+                a clean dashboard, built with Node.js and a relational
+                database.</span
+              >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: start;
+                  gap: 20px;
+                  align-items: center;
+                  margin-top: 15px;
+                "
+              >
+                <div class="cont">
+                  <span>HTML5</span>
+                </div>
+                <div class="cont">
+                  <span>CSS3</span>
+                </div>
+                <div class="cont">
+                  <span>JavaScript</span>
+                </div>
+                <div class="cont">
+                  <span>Node.js</span>
+                </div>
+                <div class="cont">
+                  <span>Express.js</span>
+                </div>
+                <div class="cont">
+                  <span>MySQL</span>
+                </div>
+              </div>
+              <div class="buttonGit" id="git2">
+                <div class="image-git"></div>
+                <span class="git">View on GitHub</span>
+              </div>
+            </div>
+          </div>
+          <div class="project3">
+            <div class="image-project3"></div>
+            <div class="descrizione" style="padding: 20px">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 10px;
+                  width: 100%;
+                "
+              >
+                <span class="titleProject">Erasmus experience in Sevilla</span>
+                <div class="boxIcon" id="git3"></div>
+              </div>
+              <span
+                style="
+                  display: flex;
+                  color: var(--text2-color);
+                  line-height: 1.63em;
+                  font-size: 17px;
+                  margin-top: 15px;
+                "
+                >A personal website showcasing my two-week Erasmus experience in
+                Seville, created as my final high school project.</span
+              >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: start;
+                  gap: 20px;
+                  align-items: center;
+                  margin-top: 15px;
+                "
+              >
+                <div class="cont">
+                  <span>HTML5</span>
+                </div>
+                <div class="cont">
+                  <span>CSS3</span>
+                </div>
+                <div class="cont">
+                  <span>JavaScript</span>
+                </div>
+              </div>
+              <div class="buttonGit" id="git3">
+                <div class="image-git"></div>
+                <span class="git">View on GitHub</span>
+              </div>
+            </div>
+          </div>
+          <div class="project4">
+            <div class="image-project4"></div>
+            <div class="descrizione" style="padding: 20px">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 10px;
+                  width: 100%;
+                "
+              >
+                <span class="titleProject">Local Bar Website</span>
+                <div class="boxIcon" id="git4"></div>
+              </div>
+              <span
+                style="
+                  display: flex;
+                  color: var(--text2-color);
+                  line-height: 1.63em;
+                  font-size: 17px;
+                  margin-top: 15px;
+                "
+                >A modern marketing website for a local bar with menu, opening
+                hours and contact section, built with a focus on atmosphere and
+                responsiveness.</span
+              >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: start;
+                  gap: 20px;
+                  align-items: center;
+                  margin-top: 15px;
+                "
+              >
+                <div class="cont">
+                  <span>HTML5</span>
+                </div>
+                <div class="cont">
+                  <span>CSS3</span>
+                </div>
+                <div class="cont">
+                  <span>JavaScript</span>
+                </div>
+              </div>
+              <div class="buttonGit" id="git4">
+                <div class="image-git"></div>
+                <span class="git">View on GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reveal">
+      <div class="section5" id="experience">
+        <span class="number">/ 04</span>
+        <span class="text">Experience & Education</span>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            margin-top: 30px;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 470px;
+              margin-bottom: 0;
+            "
+          >
+            <span style="color: var(--text2-color); font-size: 12px"
+              >EXPERIENCE</span
+            >
+            <span style="color: var(--text2-color); font-size: 12px"
+              >EDUCATION</span
+            >
+          </div>
+          <div class="container-boxes">
+            <div class="box-ex">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    align-items: center;
+                  "
+                >
+                  <div class="icon">
+                    <div class="img work"></div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 5px">
+                    <span
+                      style="
+                        color: var(--text1-color);
+                        font-size: 16px;
+                        font-weight: 500;
+                      "
+                      >Freelance Website Development</span
+                    >
+                    <span style="color: var(--text2-color); font-size: 14px"
+                      >Self-employed</span
+                    >
+                  </div>
+                </div>
+                <div class="cont">
+                  <span>On going</span>
+                </div>
+              </div>
+              <span
+                style="
+                  color: var(--text3-color);
+                  font: size 14px;
+                  line-height: 1.63em;
+                  margin-top: 20px;
+                "
+                >Designing and developing custom websites for local clients,
+                handling everything from layout and responsiveness to deployment
+                and maintenance.</span
+              >
+            </div>
+            <div class="box-ex">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    align-items: center;
+                  "
+                >
+                  <div class="icon">
+                    <div class="img school"></div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 5px">
+                    <span
+                      style="
+                        color: var(--text1-color);
+                        font-size: 16px;
+                        font-weight: 500;
+                      "
+                      >High School Diploma in Computer Science</span
+                    >
+                    <span style="color: var(--text2-color); font-size: 14px"
+                      >Italy</span
+                    >
+                  </div>
+                </div>
+                <div class="cont">
+                  <span>85 / 100</span>
+                </div>
+              </div>
+              <span
+                style="
+                  color: var(--text3-color);
+                  font: size 14px;
+                  line-height: 1.63em;
+                  margin-top: 20px;
+                "
+                >Studied programming fundamentals, databases, networking and
+                software development, building the technical foundation for my
+                career.</span
+              >
+            </div>
+            <div class="box-ex">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    align-items: center;
+                  "
+                >
+                  <div class="icon">
+                    <div class="img plumbing"></div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 5px">
+                    <span
+                      style="
+                        color: var(--text1-color);
+                        font-size: 16px;
+                        font-weight: 500;
+                      "
+                      >Plumbing Summer Job</span
+                    >
+                    <span style="color: var(--text2-color); font-size: 14px"
+                      >Seasonal</span
+                    >
+                  </div>
+                </div>
+                <div class="cont">
+                  <span>2 months</span>
+                </div>
+              </div>
+              <span
+                style="
+                  color: var(--text3-color);
+                  font: size 14px;
+                  line-height: 1.63em;
+                  margin-top: 20px;
+                "
+                >Worked a hands-on summer job that taught me discipline,
+                precision and problem-solving under real-world constraints —
+                values I bring to my development work</span
+              >
+            </div>
+            <div class="box-ex">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    align-items: center;
+                  "
+                >
+                  <div class="icon">
+                    <div class="img spain"></div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 5px">
+                    <span
+                      style="
+                        color: var(--text1-color);
+                        font-size: 16px;
+                        font-weight: 500;
+                      "
+                      >Erasmus+ Mobility Program</span
+                    >
+                    <span style="color: var(--text2-color); font-size: 14px"
+                      >Seville, Spain</span
+                    >
+                  </div>
+                </div>
+                <div class="cont">
+                  <span>Completed</span>
+                </div>
+              </div>
+              <span
+                style="
+                  color: var(--text3-color);
+                  font: size 14px;
+                  line-height: 1.63em;
+                  margin-top: 20px;
+                "
+                >International training experience that strengthened my
+                adaptability, communication and problem-solving skills while
+                collaborating with students from different countries.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reveal">
+      <div class="section6" id="contact">
+        <div class="box-contact">
+          <span class="number" style="font-size: 18px">/ 05</span>
+          <span class="text">Let's build something together</span>
+          <span
+            class="describtion"
+            style="
+              width: 100%;
+              margin-top: 20px;
+              text-align: center;
+              font: size 16px;
+              padding: 0 120px;
+            "
+          >
+            I'm open to freelance projects, junior developer roles and
+            interesting collaborations. Feel free to reach out — I'll get back
+            to you soon.
+          </span>
+          <a
+            href="mailto:emanuele.nassisi007@gmail.com?subject=Contatto%20da%20Portfolio&body=Ciao%20Emanuele,%0Ati%20scrivo%20dopo%20aver%20visto%20il%20tuo%20portfolio...%0A"
+            class="button-contact"
+            style="
+              text-decoration: none;
+              padding: 13px 20px;
+              border-radius: 30px;
+              margin-top: 30px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 7px;
+              "
+            >
+              <img src="mail-bianca.png" width="18px" />
+              <span style="font-weight: 500; font-size: 14px">Say Hello</span>
+            </div>
+          </a>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              gap: 20px;
+              margin-top: 30px;
+            "
+          >
+            <a
+              href="mailto:emanuele.nassisi007@gmail.com?subject=Contatto%20da%20Portfolio&body=Ciao%20Emanuele,%0Ati%20scrivo%20dopo%20aver%20visto%20il%20tuo%20portfolio...%0A"
+              class="social"
+            >
+              <div class="icon">
+                <div class="img mail"></div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                "
+              >
+                <span
+                  style="
+                    color: var(--text1-color);
+                    font-size: 14px;
+                    font-weight: 600;
+                  "
+                  >Email</span
+                >
+                <div class="freccia"></div>
+              </div>
+              <span style="color: var(--text2-color); font-size: 13px"
+                >emanuele.nassisi007@gmail.com</span
+              >
+            </a>
+            <div class="social" id="github">
+              <div class="icon">
+                <div class="img github"></div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                "
+              >
+                <span
+                  style="
+                    color: var(--text1-color);
+                    font-size: 14px;
+                    font-weight: 600;
+                  "
+                  >GitHub</span
+                >
+                <div class="freccia"></div>
+              </div>
+              <span style="color: var(--text2-color); font-size: 13px"
+                >https://github.com/emanuelenassisi007-cyber</span
+              >
+            </div>
+            <div class="social" id="linkedin">
+              <div class="icon">
+                <div class="img linkedin"></div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                "
+              >
+                <span
+                  style="
+                    color: var(--text1-color);
+                    font-size: 14px;
+                    font-weight: 600;
+                  "
+                  >LinkedIn</span
+                >
+                <div class="freccia"></div>
+              </div>
+              <span style="color: var(--text2-color); font-size: 13px"
+                >www.linkedin.com/in/emanuele-nassisi-b26412423</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row-name" id="row-name">
+        <div class="box-name">EN</div>
+        <span class="name">Emanuele Nassisi</span>
+      </div>
+      <span style="font-size: 12px; color: var(--text2-color)"
+        >© 2026 Emanuele Nassisi. Built with HTML. Made in Italy.</span
+      >
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+        "
+      >
+        <a class="social-contact" href="mailto:emanuele.nassisi007@gmail.com">
+          <img src="mail-bianca.png" width="25px" />
+        </a>
+        <a
+          class="social-contact"
+          href="https://github.com/emanuelenassisi007-cyber"
+        >
+          <img src="github-bianco.png" width="25px" />
+        </a>
+        <a
+          class="social-contact"
+          href="https://www.linkedin.com/in/emanuele-nassisi-b26412423"
+        >
+          <img src="linkedin.png" width="25px" />
+        </a>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const nav = document.querySelector("nav");
+    const switchButton = document.querySelector(".switch");
+    const rowName = document.getElementById("row-name");
+    const elements = document.querySelectorAll(".reveal");
+
+    // --- GESTIONE LOCALSTORAGE AL CARICAMENTO DELLA PAGINA ---
+    // Controlla se l'utente aveva precedentemente scelto la light-mode
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "light") {
+      document.body.classList.add("light-mode");
+      switchButton.innerHTML = `<img src="moon.png" alt="Dark mode" />`;
+    } else {
+      // Di default (o se ha scelto dark), si assicura che non ci sia la classe light-mode
+      document.body.classList.remove("light-mode");
+      switchButton.innerHTML = `<img src="sun.png" alt="Light mode" />`;
+    }
+    // --------------------------------------------------------
+
+    // Link esterni e navigazione
+    const git = document.getElementById("git").addEventListener("click", () => {
+      window.location.href =
+        "https://github.com/emanuelenassisi007-cyber/Arduino-project";
+    });
+    const github = document
+      .getElementById("github")
+      .addEventListener("click", () => {
+        window.location.href = "https://github.com/emanuelenassisi007-cyber";
+      });
+    const linkedin = document
+      .getElementById("linkedin")
+      .addEventListener("click", () => {
+        window.location.href =
+          "https://www.linkedin.com/in/emanuele-nassisi-b26412423";
+      });
+    const git2 = document
+      .getElementById("git2")
+      .addEventListener("click", () => {
+        window.location.href =
+          "https://github.com/emanuelenassisi007-cyber/progetto";
+      });
+    const git3 = document
+      .getElementById("git3")
+      .addEventListener("click", () => {
+        window.location.href =
+          "https://github.com/emanuelenassisi007-cyber/Erasmus-Seville-WebSite";
+      });
+    const git4 = document
+      .getElementById("git4")
+      .addEventListener("click", () => {
+        window.location.href =
+          "https://github.com/emanuelenassisi007-cyber/GranBar";
+      });
+
+    const button1 = document
+      .getElementById("button-contact1")
+      .addEventListener("click", () => {
+        window.location.href = "#contact";
+      });
+    const button2 = document
+      .getElementById("button1")
+      .addEventListener("click", () => {
+        window.location.href = "#project";
+      });
+    const button3 = document
+      .getElementById("button2")
+      .addEventListener("click", () => {
+        window.location.href = "#contact";
+      });
+
+    // Animazioni Reveal
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    // --- MODIFICA DELLO SWITCH CON SALVATAGGIO STATO ---
+    switchButton.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+
+      if (document.body.classList.contains("light-mode")) {
+        switchButton.innerHTML = `<img src="moon.png" alt="Dark mode" />`;
+        localStorage.setItem("theme", "light"); // Salva la preferenza light
+      } else {
+        switchButton.innerHTML = `<img src="sun.png" alt="Light mode" />`;
+        localStorage.setItem("theme", "dark"); // Salva la preferenza dark
+      }
+    });
+
+    // Gestione Scroll della Nav
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+
+    rowName.addEventListener("click", () => {
+      window.location.href = "#home";
+    });
+  </script>
+</html>
