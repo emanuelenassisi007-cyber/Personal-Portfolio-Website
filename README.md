@@ -33,7 +33,7 @@ The portfolio was designed and developed from scratch to present my work in a cl
 
 ## Live Demo
 
-https://emanuelenassisi007-cyber.github.io/Personal-Portfolio-Website/
+https://emanuelenassisi.it
 
 ---
 
@@ -93,5 +93,3 @@ It represents my growth as a developer and documents my journey from my first we
 ## Author
 
 **Emanuele Nassisi**
-
-GitHub: https://github.com/emanuelenassisi007-cyber
