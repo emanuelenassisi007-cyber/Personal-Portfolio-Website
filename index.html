@@ -576,7 +576,7 @@
                 "
               >
                 <span class="titleProject">Smart Home ESP32 Project</span>
-                <div class="boxIcon" id="git"></div>
+                <div class="boxIcon" id="git-arrow"></div>
               </div>
               <span
                 style="
@@ -636,7 +636,7 @@
                 "
               >
                 <span class="titleProject">Fitness Tracker Website</span>
-                <div class="boxIcon" id="git2"></div>
+                <div class="boxIcon" id="git-arrow2"></div>
               </div>
               <span
                 style="
@@ -699,7 +699,7 @@
                 "
               >
                 <span class="titleProject">Erasmus experience in Sevilla</span>
-                <div class="boxIcon" id="git3"></div>
+                <div class="boxIcon" id="git-arrow3"></div>
               </div>
               <span
                 style="
@@ -752,7 +752,7 @@
                 "
               >
                 <span class="titleProject">Local Bar Website</span>
-                <div class="boxIcon" id="git4"></div>
+                <div class="boxIcon" id="git-arrow4"></div>
               </div>
               <span
                 style="
@@ -1183,7 +1183,10 @@
           gap: 10px;
         "
       >
-        <a class="social-contact" href="mailto:emanuele.nassisi007@gmail.com">
+        <a
+          class="social-contact"
+          href="mailto:emanuele.nassisi007@gmail.com?subject=Contatto%20da%20Portfolio&body=Ciao%20Emanuele,%0Ati%20scrivo%20dopo%20aver%20visto%20il%20tuo%20portfolio...%0A"
+        >
           <img src="mail-bianca.png" width="25px" alt="Emanuele Nassisi" />
         </a>
         <a
@@ -1226,6 +1229,12 @@
       window.location.href =
         "https://github.com/emanuelenassisi007-cyber/Arduino-project";
     });
+    const gitArrow = document
+      .getElementById("git-arrow")
+      .addEventListener("click", () => {
+        window.location.href =
+          "https://github.com/emanuelenassisi007-cyber/Arduino-project";
+      });
     const github = document
       .getElementById("github")
       .addEventListener("click", () => {
@@ -1243,14 +1252,32 @@
         window.location.href =
           "https://github.com/emanuelenassisi007-cyber/progetto";
       });
+    const gitArrow2 = document
+      .getElementById("git-arrow2")
+      .addEventListener("click", () => {
+        window.location.href =
+          "https://github.com/emanuelenassisi007-cyber/progetto";
+      });
     const git3 = document
       .getElementById("git3")
       .addEventListener("click", () => {
         window.location.href =
           "https://github.com/emanuelenassisi007-cyber/Erasmus-Seville-WebSite";
       });
+    const gitArrow3 = document
+      .getElementById("git-arrow3")
+      .addEventListener("click", () => {
+        window.location.href =
+          "https://github.com/emanuelenassisi007-cyber/Erasmus-Seville-WebSite";
+      });
     const git4 = document
       .getElementById("git4")
+      .addEventListener("click", () => {
+        window.location.href =
+          "https://github.com/emanuelenassisi007-cyber/GranBar";
+      });
+    const gitArrow4 = document
+      .getElementById("git-arrow4")
       .addEventListener("click", () => {
         window.location.href =
           "https://github.com/emanuelenassisi007-cyber/GranBar";
